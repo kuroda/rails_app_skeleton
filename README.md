@@ -13,4 +13,5 @@ Usage
     find . -type f -print0 | xargs -0 sed -i 's/skeleton/new_app/g'
     find . -type f -print0 | xargs -0 sed -i 's/Skeleton/NewApp/g'
     rm README.md
-    ruby -e "require 'securerandom'; puts %Q{MyApp::Application.config.secret_token = '#{SecureRandom.hex(64)}'}" > config/initializers/secret_token.rb
+    ruby -e "require 'securerandom'; puts %Q{NewApp::Application.config.secret_token = '#{SecureRandom.hex(64)}'}" \
+      > config/initializers/secret_token.rb
